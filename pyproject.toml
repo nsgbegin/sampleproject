@@ -1,4 +1,7 @@
 [project]
+# A general reference for all the fields available in `[project]` can be found at:
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+
 # This is the name of your project. The first time you publish this
 # package, this name will be registered for you. It will determine how
 # users can install this project, e.g.:
@@ -28,7 +31,7 @@ description = "A sample Python project"  # Optional
 # the body of text which users will see when they visit PyPI.
 #
 # Often, this is the same as your README, so you can just read it in from
-# that file directly (as we have already done above)
+# that file directly (as we have already done below)
 #
 # This field corresponds to the "Description" metadata field:
 # https://packaging.python.org/specifications/core-metadata/#description-optional
@@ -48,8 +51,8 @@ license = {file = "LICENSE.txt"}
 # This field adds keywords for your project which will appear on the
 # project page. What does your project relate to?
 #
-# Note that this is a list of additional keywords, separated
-# by commas, to be used to assist searching for the distribution in a
+# Note that this is a list of additional keywords,
+# to be used to assist searching for the distribution in a
 # larger catalog.
 keywords= ["sample", "setuptools", "development"]  # Optional
 
@@ -86,7 +89,7 @@ classifiers = [  # Optional
 
   # Specify the Python versions you support here. In particular, ensure
   # that you indicate you support Python 3. These classifiers are *not*
-  # checked by "pip install". See instead "python_requires" below.
+  # checked by "pip install". See instead "requires-python" below.
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.6",
   "Programming Language :: Python :: 3.7",
@@ -112,7 +115,7 @@ dependencies=[
 #
 #   $ pip install sampleproject[dev]
 #
-# Similar to `install_requires` above, these must be valid existing
+# Similar to `dependencies` above, these must be valid existing
 # projects.
 [project.optional-dependencies]
 dev = ["check-manifest"] # Optional
@@ -151,7 +154,7 @@ sample = "sample:main"
 package-data = {"sample" = ["*.dat"]}
 
 [build-system]
-# These are the requirements required to build this project
+# These are requirements for building this project
 # https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support
 requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
